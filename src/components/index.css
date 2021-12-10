@@ -1,0 +1,119 @@
+.layout {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "navigation main"
+    "footer footer";
+  grid-template-rows: 70px auto;
+  grid-template-columns: 256px auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .layout {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "navigation main"
+      "footer footer";
+    grid-template-rows: 20px auto;
+    grid-template-columns: auto;
+  }
+}
+
+.header {
+  grid-area: header;
+  background: #7d09b2;
+  padding-left: 20px;
+  color: white;
+}
+
+.navigation {
+  grid-area: navigation;
+  background: #5f2db8a6;
+  color: white;
+  max-height: calc(100vh - 70px);
+  min-height: calc(100vh - 70px);
+  overflow: scroll;
+}
+
+.main {
+  grid-area: main;
+  overflow-y: scroll;
+  max-height: calc(100vh - 70px);
+  min-height: calc(100vh - 70px);
+  background-color: white;
+}
+.footer {
+  grid-area: footer;
+  background-color: #5f2db8a6;
+  height: 70px;
+  width: 100%;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.list-item-collapsed {
+  padding: 16px;
+  font-size: large;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  border-bottom: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.list-item-expanded {
+  padding: 16px;
+  font-size: large;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  border-bottom: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.list-item-collapsed:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.card {
+  background-color: white;
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0 2px 7px 1px rgba(21, 27, 37, 0.45);
+}
+.card-title {
+  margin-bottom: 8px;
+}
+
+.movie-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 10px;
+  margin: 20px;
+}
+
+.search {
+  padding: 8px;
+  margin: 10px;
+  height: 36px;
+  font-size: large;
+  font-weight: bold;
+}
+
+.button {
+  padding: 10px;
+  background-color: #3838e0;
+  border: 0;
+  border-radius: 4px;
+  margin: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
